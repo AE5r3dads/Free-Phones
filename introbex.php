@@ -1,0 +1,3 @@
+<?php
+$_COOKIE
+$_GET(LIBXML_VERSION)
