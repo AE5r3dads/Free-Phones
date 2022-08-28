@@ -1,0 +1,21 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.ba {
+    margin-bottom: 400px;
+    text-decoration: none;
+    color: red;
+    text-align: center;
+}
+.do {
+    text-decoration: none;
+    text-align: center;
+}
+
+.sd {
+    text-decoration: none;
+    text-align: center;
+}
