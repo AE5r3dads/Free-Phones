@@ -1,108 +1,120 @@
+/* Import Google Font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 *{
-    padding: 0;
-    margin: 0;
-    font-family: sans-serif;
-    background: #202020;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
-.container{
-    background: #202020;
-    min-height: 100vh;
-    width: 100%;
-    overflow: hidden;
-    position: relative;
+body{
+  background: #4285f4;
 }
-.container2{
-    background: #202020;
-    min-height: 100vh;
-    width: 100%;
-    overflow: hidden;
-    position: relative;
+::selection{
+  color: #fff;
+  background: #4285f4;
 }
-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 80%;
-    margin: auto;
-    padding: 20px 0;
+.wrapper{
+  width: 370px;
+  margin: 85px auto 0;
 }
-.home{
-    width: 40px;
+.select-btn, li{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
 }
-ul li{
-    display: inline-block;
+.select-btn{
+  height: 65px;
+  padding: 0 20px;
+  font-size: 22px;
+  background: #fff;
+  border-radius: 7px;
+  justify-content: space-between;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
-ul li a{
-    color: #fff;
-    text-decoration: none;
-    margin: 0 10px;
+.select-btn i{
+  font-size: 31px;
+  transition: transform 0.3s linear;
+}
+.wrapper.active .select-btn i{
+  transform: rotate(-180deg);
 }
 .content{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 80%;
+  display: none;
+  padding: 20px;
+  margin-top: 15px;
+  background: #fff;
+  border-radius: 7px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+.wrapper.active .content{
+  display: block;
+}
+.content .search{
+  position: relative;
+}
+.search i{
+  top: 50%;
+  left: 15px;
+  color: #999;
+  font-size: 20px;
+  pointer-events: none;
+  transform: translateY(-50%);
+  position: absolute;
+}
+.search input{
+  height: 50px;
+  width: 100%;
+  outline: none;
+  font-size: 17px;
+  border-radius: 5px;
+  padding: 0 20px 0 43px;
+  border: 1px solid #B3B3B3;
+}
+.search input:focus{
+  padding-left: 42px;
+  border: 2px solid #4285f4;
+}
+.search input::placeholder{
+  color: #bfbfbf;
+}
+.content .options{
+  margin-top: 10px;
+  max-height: 250px;
+  overflow-y: auto;
+  padding-right: 7px;
+}
+.options::-webkit-scrollbar{
+  width: 7px;
+}
+.options::-webkit-scrollbar-track{
+  background: #f1f1f1;
+  border-radius: 25px;
+}
+.options::-webkit-scrollbar-thumb{
+  background: #ccc;
+  border-radius: 25px;
+}
+.options::-webkit-scrollbar-thumb:hover{
+  background: #b3b3b3;
+}
+.options li{
+  height: 50px;
+  padding: 0 13px;
+  font-size: 21px;
+}
+.options li:hover, li.selected{
+  border-radius: 5px;
+  background: #f2f2f2;
+}
+
+.btn-loca {
+    position: relative;
+    background: #4285f4;
+    height: auto;
     margin: auto;
-}
-.content .text{
-    width: 40%;
-    color: #fff;
-}
-.content .text h2{
-    font-size: 40px;
-    text-transform: uppercase;
-}
-.content .text p{
-    font-size: 18px;
-    margin: 20px 0;
-}
-.content .text a{
-    text-decoration: none;
-    background: #fff;
-    color: #000;
-    padding: 8px 15px;
-    border-radius: 20px;
-}
-.content .image{
-    width: 30%;
-}
-.content .image img{
-    width: 180px;
-}
-.icons{
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-.icons img{
-    width: 40px;
-    transition: 0.5s;
-    cursor: pointer;
-}
-.icons img:hover{
-    transform: scale(1.9);
-}
-.fas{
-    color: #202020;
-    cursor:context-menu;
-    background-color: #202020;
-}
-::-webkit-scrollbar {
-    width: 1em;
-}
-
-::-webkit-scrollbar-track {
-    background-color: hsl(120, 75%, 50% );
-    margin-block: .5em;
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: hsl(120, 100%, 20% );
-    border: .25em solid hsl(120, 75%, 50% ); ;
-    border-radius: 100vw;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background-color: hsl(120, 100%, 10%);
+    left: auto;
+    right: auto;
+    width: auto;
+    nav-down: auto;
+    nav-up: auto;
 }
